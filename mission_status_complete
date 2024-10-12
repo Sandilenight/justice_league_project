@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Enter mission ID to mark as completed: "
+read mission_id
+psql -U postgres -d justice_league -c "UPDATE missions SET completed = true WHERE id = $mission_id;"

@@ -1,0 +1,2 @@
+#!/bin/bash
+psql -U postgres -d justice_league -c "SELECT m.name, l.missions_completed FROM members m JOIN leaderboard l ON m.id = l.member_id ORDER BY l.missions_completed DESC;"
